@@ -1,27 +1,25 @@
-print("select an operation to perform:")
-print("1. ADD")
-print("2. SUBSTRACT")
-print("3. MULTIPLY")
-print("4. DIVIDE")
+def calculator(operation):
+    print("Welcome to my simple calculator!")
+    operation = (input("Please select an operation( +, -, *, /): "))
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    if operation == '+':
+        result = num1 + num2
+        print(f"The result for {num1} + {num2} is {result}")
+    elif operation == '-':
+        result = num1 - num2
+        print(f"The result for {num1} - {num2} is {result}")
+    elif operation == '*':
+        result = num1 * num2
+        print (f"The result for {num1} * {num2} is {result}")
+    elif operation == '/':
+        if num2 != 0: 
+            result = num1 / num2 
+            print(f"The result for {num1} / {num2} is {result}")
+        else:
+                print("Error: Number cannot be divisible by 0")
+    else:
+         print("Invalid operation, please try again")
 
-operation = input()
-
-if operation == "1":
-   num1 = input("Enter first number: ")
-   num2 = input("Enter second number: ")
-   print ("The sum is " + str(int(num1) + int(num2)))
-elif operation == "2":
-    num1 = input("Enter first number: ")
-    num2 = input("Enter second number: ")
-    print("The difference is " +  str(int(num1) - int(num2)))
-elif operation == "3":
-    num1 = input("Enter first number: ")
-    num2 = input("Enter second number: ")
-    print("The product is " + str(int(num1) * int(num2)))
-elif operation == "4":
-     num1 = input("Enter first number: ")
-     num2 = input("Enter second number: ")
-     print("The result is " + str(int(num1) / int(num2)))
-else:
-    print("Invalid Entry")
+calculator(2)
     
